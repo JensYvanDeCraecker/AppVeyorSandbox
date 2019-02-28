@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Jens Yvan De Craecker</Authors>
+    <Company />
+    <Description>SimplePipeline is an easy to use pipeline system. Our code uses custom interfaces making it highly extensible.</Description>
+    <PackageLicenseUrl>https://github.com/JensYvanDeCraecker/SimplePipeline/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/JensYvanDeCraecker/SimplePipeline</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Pipeline, Filters, Interfaces, Easy, Simple, Framework</PackageTags>
+    <PackageProjectUrl>https://github.com/JensYvanDeCraecker/SimplePipeline</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>- Updated behaviour of CanCreatePipeline in FilterCollection class: null in any of the parameters doesn't cause an exception, false will be returned if any of the parameters is null.
+- Updated summaries on various classes and members.
+- Added add methods in FilterCollection class that take a function and a pipeline
+- Added constructors in Pipeline class and FilterCollection class that take an enumerable
+FirstFilter and LastFilter properties in FilterCollection class
+- Various code optimisations
+- Rebuilt inner design of FilterCollection class</PackageReleaseNotes>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\SimplePipeline.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\ExceptionMessagesResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExceptionMessagesResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ExceptionMessagesResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionMessagesResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
