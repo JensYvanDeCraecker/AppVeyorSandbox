@@ -6,12 +6,13 @@ before_build:
 - cmd: nuget restore SimplePipeline/SimplePipeline.sln
 build:
   project: SimplePipeline/SimplePipeline.sln
+  publish_nuget: true
   verbosity: minimal
 deploy:
 - provider: NuGet
   api_key:
     secure: 3jMpZitNlqbNMerS8bqBCTpex4sadcr3dHUKOMt+qg0R+r0xN8IXSi9p4mLxQGCl
-  artifact: /.*\.nupkg/
+  artifact: SimplePipeline/SimplePipeline/bin/Release/AppVeyorTest.*.nupkg
   on:
     branch: master
     APPVEYOR_REPO_TAG: true
