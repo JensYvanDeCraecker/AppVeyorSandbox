@@ -6,7 +6,6 @@ before_build:
 - cmd: nuget restore SimplePipeline/SimplePipeline.sln
 build:
   project: SimplePipeline/SimplePipeline.sln
-  publish_nuget: true
   verbosity: minimal
 deploy:
 - provider: NuGet
