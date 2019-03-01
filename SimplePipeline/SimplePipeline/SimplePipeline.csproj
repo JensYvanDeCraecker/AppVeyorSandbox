@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jens Yvan De Craecker</Authors>
     <Company />
     <Description>SimplePipeline is an easy to use pipeline system. Our code uses custom interfaces making it highly extensible.</Description>
@@ -19,7 +19,8 @@
 FirstFilter and LastFilter properties in FilterCollection class
 - Various code optimisations
 - Rebuilt inner design of FilterCollection class</PackageReleaseNotes>
-    <Version>1.1.0</Version>
+    <Version>1.0.0</Version>
+    <PackageId>AppVeyorTest</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
